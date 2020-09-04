@@ -7,7 +7,7 @@ EXTRACT: your original data sources and how the data was formatted (CSV, JSON, p
 
 TRANSFORM: what data cleaning or transformation was required: 
 
-All files required cleaning including renaming columns, deleting columns with unneccessary data and/or all NAN values, and manipulating dtypes as necessary (for example: object to float).  The library file in particular required unique manipulation including using encoding=”ISO-8859-1” to read the CSV, replacing NAN values with 0's to be able to perform calculations, and performing a groupby to find the total number of libraries by country.
+All files required cleaning including renaming columns, deleting columns with unneccessary data and/or all NAN values, and manipulating dtypes as necessary (for example: object to float).  The library file in particular required unique manipulation including using encoding=”ISO-8859-1” to read the CSV, replacing NAN values with 0's to be able to perform calculations, and performing a groupby to find the total number of libraries by country. We also filtered the library data to only include rows with libraries data; we did not need to keep the information regarding staff , internet access, or users.
   
 
 LOAD: the final database, tables/collections, and why this was chosen: 
