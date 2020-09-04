@@ -7,7 +7,9 @@ We searched sources including Kaggle and the world wide web and found CSV files 
 
 TRANSFORM: what data cleaning or transformation was required: 
 
-All files required cleaning including renaming columns, deleting columns with unneccessary data and/or all NAN values, and manipulating dtypes as necessary (for example: object to float).  The library file in particular required unique manipulation including using encoding=”ISO-8859-1” to read the CSV, replacing NAN values with 0's to be able to perform calculations, and performing a groupby to find the total number of libraries by country. We also filtered the library data to only include rows with libraries data; we did not need to keep the information regarding staff , internet access, or users. Worth noting, our joins worked best in postgresQL once we corrected all column names to be only in lowercase and have no spaces (we used underscores instead).
+All files required cleaning including renaming columns, deleting columns with unneccessary data and/or all NAN values, and manipulating dtypes as necessary (for example: object to float).  The library file in particular required unique manipulation including using encoding=”ISO-8859-1” to read the CSV, replacing NAN values with 0's to be able to perform calculations, and performing a groupby to find the total number of libraries by country. We also filtered the library data to only include rows with libraries data; we did not need to keep the information regarding staff , internet access, or users. Worth noting, our joins worked best in postgresQL once we corrected all column names to be only in lowercase and have no spaces (we used underscores instead). 
+
+Please note for the final homicides data, some of the countries have a value of "null". We considered changing these values to "0"; however this would be incorrect as essentially a null value is an unknown value.  Certain countries actually reported a literal 0 as their number of intentional homicides per 100,000 people, thus we did not want to dilute the accuracy of the data with false zeroes.
   
 
 LOAD: the final database, tables/collections, and why this was chosen: 
